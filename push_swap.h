@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 22:25:17 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/01/18 10:44:38 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/01/18 14:55:57 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 
 # include "libft/libft.h"
 # include <unistd.h>
+
+typedef struct s_push_swap
+{
+	char	**input;
+}	t_push_swap;
 
 void	valid_amount(int arg);
 void	valid_type(char *arg);

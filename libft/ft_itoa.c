@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 01:53:23 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/09/23 17:34:30 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/01/18 15:18:23 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	size_t	len;
-
 
 	len = ft_counter(n);
 	str = (char *)ft_calloc(len + 1, sizeof(char));
