@@ -6,7 +6,7 @@
 #    By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/14 21:37:50 by jmilson-          #+#    #+#              #
-#    Updated: 2022/01/18 10:05:27 by jmilson-         ###   ########.fr        #
+#    Updated: 2022/01/18 10:44:50 by jmilson-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 CC = gcc
 
-SRC = push_swap.c input_validations.c
+SRC = push_swap.c input_validations.c messages.c
 
 INCLUDES = -I ./libft
 
