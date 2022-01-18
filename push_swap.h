@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 22:25:17 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/01/14 22:28:37 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/01/18 10:36:00 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,8 @@
 
 # include "libft/libft.h"
 # include <unistd.h>
+
+void	valid_amount(int arg);
+void	valid_type(char *arg);
 
 #endif
