@@ -6,7 +6,7 @@
 #    By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/31 23:34:44 by jmilson-          #+#    #+#              #
-#    Updated: 2021/09/20 12:58:15 by jmilson-         ###   ########.fr        #
+#    Updated: 2022/02/07 18:55:23 by jmilson-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ SRCS = ft_atoi.c \
 
 OBJS = $(SRCS:.c=.o)
 
-CC = clang
+CC = gcc
 
 all: $(NAME)
 

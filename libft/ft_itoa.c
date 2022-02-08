@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 01:53:23 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/01/18 15:18:23 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/02/05 02:05:52 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,10 @@ char	*ft_itoa(int n)
 	char	*str;
 	size_t	len;
 
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	len = ft_counter(n);
 	str = (char *)ft_calloc(len + 1, sizeof(char));
 	if (str == NULL)

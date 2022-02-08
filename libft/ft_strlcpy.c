@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 14:27:48 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/09/16 23:00:39 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/02/05 01:55:18 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	size_t	i;
 	size_t	len;
 
-	i = 0;
 	len = ft_strlen(src);
 	if (size > len + 1)
 		ft_memmove(dest, src, len + 1);

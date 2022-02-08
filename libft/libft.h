@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/26 17:08:01 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/09/22 00:42:46 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/02/07 18:54:21 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # define INT_MIN -2147483648
 # include <unistd.h>
 # include <stdlib.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 //** Part 1 **
 

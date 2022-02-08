@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 01:57:09 by jmilson-          #+#    #+#             */
-/*   Updated: 2021/09/10 14:30:50 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/02/05 01:54:24 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t number, size_t size)
 
 	i = number * size;
 	ptr = malloc(i);
-	if (!ptr || i < 0)
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, i);
 	return (ptr);

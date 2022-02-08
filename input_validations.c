@@ -6,7 +6,7 @@
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 09:59:25 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/01/18 15:17:33 by jmilson-         ###   ########.fr       */
+/*   Updated: 2022/02/01 15:38:31 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,26 @@ void	valid_amount(int arg)
 {
 	if (arg < 2)
 		warning("Missing arguments", 1);
-	if (arg > 2)
-		warning("Too many arguments", 1);
+	if (arg == 2)
+		warning("Too few arguments", 1);
 }
 
-void	valid_type(char *arg)
+void	valid_type(char **arg)
 {
-	int is_empty;
+	int	i;
+	int	j;
 
-	is_empty = 0;
-	while (*arg)
+	i = 1;
+	while (arg[i])
 	{
-		if (!ft_isdigit(*arg))
+		j = 0;
+		while (arg[i][j])
 		{
-			if ((*arg) != ' ')
-				warning("Only numbers can be sorted", 1);
+			if (!ft_isdigit(arg[i][j]))
+				if (arg[i][j] != '-' && arg[i][j] != '+')
+					warning("Only numbers can be sorted", 1);
+			j++;
 		}
-		if (ft_isdigit(*arg))
-			is_empty++;
-		arg++;
+		i++;
 	}
-	if (is_empty == 0)
-		warning("Empty argument", 1);
 }
