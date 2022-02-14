@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   free_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/06 14:27:48 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/02/05 01:55:18 by jmilson-         ###   ########.fr       */
+/*   Created: 2022/02/13 22:58:42 by jmilson-          #+#    #+#             */
+/*   Updated: 2022/02/13 22:58:44 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+void	free_stack(t_doubly_list *stack)
 {
-	size_t	len;
+	t_doubly_list	*aux;
 
-	len = ft_strlen(src);
-	if (size > len + 1)
-		ft_memmove(dest, src, len + 1);
-	else if (size != 0)
+	while (stack)
 	{
-		ft_memmove(dest, src, size);
-		dest[size - 1] = 0;
+		aux = stack->next;
+		free(stack);
+		stack = aux;
 	}
-	return (len);
+	return ;
+}
+
+void	free_stacks(t_stacks *stacks)
+{
+	if (stacks->stack_a)
+		free_stack(stacks->stack_a);
+	if (stacks->stack_b)
+		free_stack(stacks->stack_b);
+	if (stacks->max_values)
+		free(stacks->max_values);
 }

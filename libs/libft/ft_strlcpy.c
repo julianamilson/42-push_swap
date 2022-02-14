@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_validations.c                                :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/18 09:59:25 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/02/01 15:38:31 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/09/06 14:27:48 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/09/16 23:00:39 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	valid_amount(int arg)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	if (arg < 2)
-		warning("Missing arguments", 1);
-	if (arg == 2)
-		warning("Too few arguments", 1);
-}
+	size_t	i;
+	size_t	len;
 
-void	valid_type(char **arg)
-{
-	int	i;
-	int	j;
-
-	i = 1;
-	while (arg[i])
+	i = 0;
+	len = ft_strlen(src);
+	if (size > len + 1)
+		ft_memmove(dest, src, len + 1);
+	else if (size != 0)
 	{
-		j = 0;
-		while (arg[i][j])
-		{
-			if (!ft_isdigit(arg[i][j]))
-				if (arg[i][j] != '-' && arg[i][j] != '+')
-					warning("Only numbers can be sorted", 1);
-			j++;
-		}
-		i++;
+		ft_memmove(dest, src, size);
+		dest[size - 1] = 0;
 	}
+	return (len);
 }

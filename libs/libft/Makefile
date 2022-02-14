@@ -6,7 +6,7 @@
 #    By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/31 23:34:44 by jmilson-          #+#    #+#              #
-#    Updated: 2022/02/07 18:55:23 by jmilson-         ###   ########.fr        #
+#    Updated: 2022/02/13 23:14:11 by jmilson-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = libft.a
 FLAGS = -Wall -Werror -Wextra
 
 SRCS = ft_atoi.c \
+	ft_atoli.c \
 	ft_bzero.c \
 	ft_calloc.c \
 	ft_isalnum.c \
@@ -51,7 +52,7 @@ SRCS = ft_atoi.c \
 
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc
+CC = clang
 
 all: $(NAME)
 

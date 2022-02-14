@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   normalize.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/14 22:25:03 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/02/01 14:42:47 by jmilson-         ###   ########.fr       */
+/*   Created: 2022/02/13 22:59:02 by jmilson-          #+#    #+#             */
+/*   Updated: 2022/02/13 22:59:03 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	normalize(t_stacks *stacks)
 {
-	// t_push_swap	psh_swp;
+	t_doubly_list	*pivot;
+	t_doubly_list	*pivot_aux;
 
-	valid_amount(argc);
-	valid_type(argv);
-	int i = 0;
-	while (argv[i])
+	pivot = stacks->stack_a;
+	while (pivot->next)
 	{
-		ft_putendl_fd(argv[i], 1);
-		i++;
+		pivot_aux = pivot->next;
+		while (pivot_aux)
+		{
+			if (pivot->content > pivot_aux->content)
+				pivot->index++;
+			else
+				pivot_aux->index++;
+			pivot_aux = pivot_aux->next;
+		}
+		pivot = pivot->next;
 	}
-	return (0);
+	return ;
 }
-
-/*
-TO DO
-
-0. Is it only number?
-1. Repeated numbers?
-2. Is sorted?
-3. Is int?
-*/
-

@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/14 22:25:17 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/02/01 15:35:58 by jmilson-         ###   ########.fr       */
+/*   Created: 2021/08/23 17:23:23 by jmilson-          #+#    #+#             */
+/*   Updated: 2021/09/07 16:20:23 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include "libft/libft.h"
-# include <unistd.h>
-
-# define INT_MAX 2147483647
-
-typedef struct s_push_swap
+int	ft_isalpha(int n)
 {
-	char	**input;
-}	t_push_swap;
-
-void	valid_amount(int arg);
-void	valid_type(char **arg);
-void	warning(char *msg, int n);
-
-#endif
+	return ((n >= 'A' && n <= 'Z')
+		|| (n >= 'a' && n <= 'z'));
+}

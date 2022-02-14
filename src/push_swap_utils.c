@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmilson- <jmilson-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 17:23:23 by jmilson-          #+#    #+#             */
-/*   Updated: 2022/01/18 11:02:00 by jmilson-         ###   ########.fr       */
+/*   Created: 2022/02/13 23:00:14 by jmilson-          #+#    #+#             */
+/*   Updated: 2022/02/13 23:00:15 by jmilson-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_isalpha(int n)
+int	is_sorted_asc(t_doubly_list *stack)
 {
-	if ((n >= 'A' && n <= 'Z') || (n >= 'a' && n <= 'z'))
-		return (1);
-	return (0);
+	while (stack && stack->next)
+	{
+		if (stack->content > stack->next->content)
+		{
+			return (0);
+		}
+		stack = stack->next;
+	}
+	return (1);
 }
