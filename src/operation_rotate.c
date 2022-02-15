@@ -26,7 +26,6 @@ void	ra(t_stacks *stacks, int flag)
 	ft_doubly_lstadd_back(&(stacks->stack_a), temp);
 	if (flag == 1)
 		ft_putendl_fd("ra", 1);
-	return ;
 }
 
 /* rotate b - shift up all elements of stack b by 1. The first element becomes
@@ -43,7 +42,6 @@ void	rb(t_stacks *stacks, int flag)
 	ft_doubly_lstadd_back(&(stacks->stack_b), temp);
 	if (flag == 1)
 		ft_putendl_fd("rb", 1);
-	return ;
 }
 
 /* rotate a and rotate b at the same time. */
@@ -52,5 +50,4 @@ void	rr(t_stacks *stacks)
 	ra(stacks, 0);
 	rb(stacks, 0);
 	ft_putendl_fd("rr", 1);
-	return ;
 }
