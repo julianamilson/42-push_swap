@@ -31,5 +31,4 @@ void	normalize(t_stacks *stacks)
 		}
 		pivot = pivot->next;
 	}
-	return ;
 }
