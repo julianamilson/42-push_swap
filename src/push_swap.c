@@ -14,20 +14,12 @@
 
 void	sort(t_stacks *stacks)
 {
-	int	list_size;
-
-	list_size = ft_doubly_lstsize(stacks->stack_a);
-	if (list_size <= 3)
+	if (stacks->stack_size <= 3)
 		sort_three(stacks);
-	else if (list_size <= 5)
+	else if (stacks->stack_size <= 5)
 		sort_five(stacks);
 	else
 		big_sort(stacks);
-}
-
-void	push_swap(t_stacks *stacks)
-{
-	sort(stacks);
 }
 
 int	main(int argc, char **argv)
@@ -40,7 +32,7 @@ int	main(int argc, char **argv)
 		{
 			if (!is_sorted_asc(stacks.stack_a))
 			{
-				push_swap(&stacks);
+				sort(&stacks);
 			}
 			free_stacks(&stacks);
 		}
