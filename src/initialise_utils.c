@@ -19,7 +19,6 @@ void	initialise_counts(t_counts *counts, t_stacks *stacks)
 	counts->big_group = stacks->groups - 1;
 	counts->big_elements = stacks->max_values[stacks->groups - 1];
 	counts->rbs = 0;
-	return ;
 }
 
 void	initialise(t_stacks *stacks)
@@ -29,5 +28,4 @@ void	initialise(t_stacks *stacks)
 	stacks->max_values = NULL;
 	stacks->stack_size = 0;
 	stacks->groups = 0;
-	return ;
 }
