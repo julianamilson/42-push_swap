@@ -18,8 +18,7 @@ void	sort_three(t_stacks *stacks)
 	int	second;
 	int	third;
 
-	if (ft_doubly_lstsize(stacks->stack_a) == 2
-		&& !is_sorted_asc(stacks->stack_a))
+	if (stacks->stack_size == 2 && !is_sorted_asc(stacks->stack_a))
 	{
 		sa(stacks, 1);
 		return ;
@@ -69,8 +68,7 @@ void	send_to_top_a(t_stacks *stacks, int index)
 	{
 		while (stacks->stack_a->index != index)
 		{
-			if (stacks->stack_a->next->index == index
-				&& stacks->stack_a->index == index - 1)
+			if (stacks->stack_a->next->index == index)
 				sa(stacks, 1);
 			else
 				ra(stacks, 1);
@@ -80,8 +78,7 @@ void	send_to_top_a(t_stacks *stacks, int index)
 	{
 		while (stacks->stack_a->index != index)
 		{
-			if (stacks->stack_a->next->index == index
-				&& stacks->stack_a->index == index - 1)
+			if (stacks->stack_a->next->index == index)
 				sa(stacks, 1);
 			else
 				rra(stacks, 1);
@@ -98,8 +95,7 @@ void	send_to_top_b(t_stacks *stacks, int index)
 	{
 		while (stacks->stack_b->index != index)
 		{
-			if (stacks->stack_b->next->index == index
-				&& stacks->stack_b->index == index - 1)
+			if (stacks->stack_b->next->index == index)
 				sb(stacks, 1);
 			else
 				rb(stacks, 1);
@@ -109,8 +105,7 @@ void	send_to_top_b(t_stacks *stacks, int index)
 	{
 		while (stacks->stack_b->index != index)
 		{
-			if (stacks->stack_b->next->index == index
-				&& stacks->stack_b->index == index - 1)
+			if (stacks->stack_b->next->index == index)
 				sb(stacks, 1);
 			else
 				rrb(stacks, 1);

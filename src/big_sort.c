@@ -17,10 +17,7 @@ static void	split_in_groups(t_stacks *stacks)
 	int	max_index;
 	int	counter;
 
-	if (stacks->stack_size >= 500)
-		stacks->groups = 20;
-	else if (stacks->stack_size < 500 && stacks->stack_size > 5)
-		stacks->groups = ft_sqrt(stacks->stack_size);
+	stacks->groups = ft_sqrt(stacks->stack_size);
 	if (stacks->stack_size % stacks->groups)
 		stacks->groups++;
 	stacks->max_values = (int *)malloc(sizeof(int) * stacks->groups);
