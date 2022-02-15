@@ -24,7 +24,6 @@ void	rra(t_stacks *stacks, int flag)
 	ft_doubly_lstadd_front(&(stacks->stack_a), last_element);
 	if (flag == 1)
 		ft_putendl_fd("rra", 1);
-	return ;
 }
 
 void	rrb(t_stacks *stacks, int flag)
@@ -39,7 +38,6 @@ void	rrb(t_stacks *stacks, int flag)
 	ft_doubly_lstadd_front(&(stacks->stack_b), last_element);
 	if (flag == 1)
 		ft_putendl_fd("rrb", 1);
-	return ;
 }
 
 void	rrr(t_stacks *stacks)
@@ -47,5 +45,4 @@ void	rrr(t_stacks *stacks)
 	rra(stacks, 0);
 	rrb(stacks, 0);
 	ft_putendl_fd("rrr", 1);
-	return ;
 }
