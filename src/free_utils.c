@@ -22,7 +22,6 @@ void	free_stack(t_doubly_list *stack)
 		free(stack);
 		stack = aux;
 	}
-	return ;
 }
 
 void	free_stacks(t_stacks *stacks)

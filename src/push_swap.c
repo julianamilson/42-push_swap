@@ -23,13 +23,11 @@ void	sort(t_stacks *stacks)
 		sort_five(stacks);
 	else
 		big_sort(stacks);
-	// return ;
 }
 
 void	push_swap(t_stacks *stacks)
 {
 	sort(stacks);
-	// return ;
 }
 
 int	main(int argc, char **argv)

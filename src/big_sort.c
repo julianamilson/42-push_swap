@@ -76,7 +76,6 @@ static void	sort_and_push_back_to_a(t_stacks *stacks)
 		send_to_top_b(stacks, index);
 		pa(stacks);
 	}
-	// return ;
 }
 
 void	big_sort(t_stacks *stacks)
@@ -84,5 +83,4 @@ void	big_sort(t_stacks *stacks)
 	split_in_groups(stacks);
 	sorting_groups(stacks);
 	sort_and_push_back_to_a(stacks);
-	// return ;
 }
