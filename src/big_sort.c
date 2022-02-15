@@ -18,9 +18,9 @@ static void	split_in_groups(t_stacks *stacks)
 	int	counter;
 
 	if (stacks->stack_size >= 500)
-		stacks->groups = 12;
+		stacks->groups = 20;
 	else if (stacks->stack_size < 500 && stacks->stack_size > 5)
-		stacks->groups = 5;
+		stacks->groups = ft_sqrt(stacks->stack_size);
 	if (stacks->stack_size % stacks->groups)
 		stacks->groups++;
 	stacks->max_values = (int *)malloc(sizeof(int) * stacks->groups);
@@ -76,7 +76,7 @@ static void	sort_and_push_back_to_a(t_stacks *stacks)
 		send_to_top_b(stacks, index);
 		pa(stacks);
 	}
-	return ;
+	// return ;
 }
 
 void	big_sort(t_stacks *stacks)
@@ -84,5 +84,5 @@ void	big_sort(t_stacks *stacks)
 	split_in_groups(stacks);
 	sorting_groups(stacks);
 	sort_and_push_back_to_a(stacks);
-	return ;
+	// return ;
 }
